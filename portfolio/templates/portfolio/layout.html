@@ -1,0 +1,23 @@
+<!-- layout.html -->
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/estilos.css' %}">
+
+<body>
+    <header>
+        <div>António Antunes</div>
+        <nav>
+            <a href="">home</a>      
+            <a href="">products</a>      
+            <a href="">about</a>      
+            <a href="">contact</a> 
+        </nav>
+    </header>
+	<main> 
+        {% block main %}
+        {% endblock main %}
+    </main>
+    <footer>
+        <div>ULHT 2023</div>
+    </footer>
+</body>
