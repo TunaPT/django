@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="António Antunes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/computer.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="item-left">
+            <a href="../">Home</a>
+        </div>
+
+        <div class="item-center">
+            <a href="">Web Programming</a>
+            <a href="#labs">LABS</a>
+        </div>
+
+        <div class="dropDownMenu">
+            <button class="dropDownButton">Menu</button>
+            <div class="dropdown-content">
+                <a href="">Web Programming</a>
+                <a href="#labs">LABS</a>
+            </div>
+        </div>
+
+        <div class="item-right">
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cover-page">
+            <div class="title">
+                <h1>Web Programming</h1>
+            </div>
+        </div>
+
+        <div class="sections-page">
+            <section id="labs">
+
+                <div class="section-title">
+                    <h2>Labs</h2>
+                </div>
+
+                <div class="box-content">
+                    <div class="box-text">
+                        <h3>Website with Quizz and CSS</h3>
+                        <div class="reveal-text">
+                            <p>
+                                Creation of a website with the theme of a city, including a quizz and css for style - <a href="http://tuna.pythonanywhere.com/">Website</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="box-text">
+                        <h3>Website with Layouts based in flex and grid</h3>
+                        <div class="reveal-text">
+                            <p>
+                                Creation of a website with the theme of travelling, including capitals around the world and different grid pages - <a href="http://tuna2.pythonanywhere.com/">Website</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="box-text">
+                        <h3>Website with Responsive Interface</h3>
+                        <div class="reveal-text">
+                            <p>
+                                Creation of a website with the theme of a city, allowing responsiveness for computers and phones interfaces - <a href="http://tuna3.pythonanywhere.com/">Website</a>
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/antunes07/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/TunaPT"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:asf.antunes@gmail.com"><i class="fa-brands fa-google-plus"></i></a>
+            <a href="https://www.linkedin.com/in/asf-antonio-antunes/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Lisbon, Portugal</p>
+            <p>António Antunes - &copy;2023 - Universidade Lusófona<img src="{% static 'images/lusofona.png' %}" alt="Lusofona Logo"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

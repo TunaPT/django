@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="António Antunes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/computer.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="item-left">
+            <a href="../">Home</a>
+        </div>
+
+        <div class="item-center">
+            <a href="">Blog</a>
+            <a href="#posts">Posts</a>
+            <a href="#novo-post">Novo Post</a>
+        </div>
+    
+        <div class="dropDownMenu">
+            <button class="dropDownButton">Menu</button>
+            <div class="dropdown-content">
+                <a href="">Blog</a>
+                <a href="#posts">Posts</a>
+                <a href="#novo-post">Novo Post</a>
+            </div>
+        </div>
+
+        <div class="item-right">
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cover-page">
+            <div class="title">
+                <h1>Blog</h1>
+            </div>
+        </div>
+
+        <div class="sections-page">
+            <section id="posts">
+
+                <div class="section-title">
+                    <h2>Posts</h2>
+                </div>
+
+                <div class="box-content">
+                    <ul>
+                        {% for post in posts %}
+                            <br>
+                            <h2>
+                                {{ post.titulo }} | 
+                                {% for area in post.areas.all %}
+                                    {{ area.nome }}
+                                {% endfor %}
+                            </h2>
+
+                            <p>{{ post.texto }}</p>
+
+                            <br>
+
+                            {% if post.link %}
+                                <a href="{{ post.link }}">Link</a>
+                            {% endif %}
+
+                            {% if post.imagem %}
+                                <img src="{{ post.imagem.url }}" alt="Imagem do post">
+                            {% endif %}
+
+                            {% for autor in post.autores.all %}
+                                <p>Autor: {{ autor.nome }}</p>
+                            {% endfor %}
+
+                            <p>Likes: {{ post.likes }}</p>
+                
+                            <form action="{% url 'like_post' post.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit">Like</button>
+                            </form>
+                            
+                            <br>
+                            <hr>
+                        {% endfor %}
+                    </ul>
+                </div> 
+            </section>
+
+            <section id="novo-post">
+                <div class="section-title">
+                    <h2>Novo Post</h2>
+                </div>
+
+                <div class="box-content">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Publicar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <p>GitHub: <a href="{{ account.repo_github }}">{{ account.repo_github }}</a></p>
+            <p>PythonAnywhere: <a href="{{ account.pythonanywhere }}">{{ account.pythonanywhere }}</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

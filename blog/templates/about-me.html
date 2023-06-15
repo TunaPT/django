@@ -1,0 +1,157 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="António Antunes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/computer.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="item-left">
+            <a href="../">Home</a>
+        </div>
+
+        <div class="item-center">
+            <a href="">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#interests">Interests</a>
+        </div>
+
+        <div class="dropDownMenu">
+            <button class="dropDownButton">Menu</button>
+            <div class="dropdown-content">
+                <a href="">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#interests">Interests</a>
+            </div>
+        </div>
+
+        <div class="item-right">
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cover-page">
+            <div class="title">
+                <h1>About Me</h1>
+            </div>
+        </div>
+
+        <div class="sections-page">
+            <section id="education">
+
+                <div class="section-title">
+                    <h2>Education</h2>
+                </div>
+
+                <div class="box-content">
+                    <div class="box-text">
+                        <h3>Escola Secundária António Damásio<img src="{% static 'images/esad.png' %}" alt="ESAD Logo"></h3>
+                        <div class="reveal-text">
+                            <p>Ciências e Tecnologias | 2018 - 2021</p>
+                        </div>
+                    </div>
+
+                    <div class="box-text">
+                        <h3>Universidade Lusófona<img src="{% static 'images/lusofona.png' %}" alt="Lusofona Logo"></h3>
+                        <div class="reveal-text">
+                            <p>Engenharia Informática | 2021 - 2024</p>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+
+            <section id="skills">
+
+                <div class="section-title">
+                    <h2>Skills</h2>
+                </div>
+
+                <div class="box-content">
+                    <div class="box-text">
+                        <h3>Languages</h3>
+                        <div class="reveal-text">
+                            <p>- Portuguese | Native Speaker</p>
+                            <p>- English | Advanced Level</p>
+                            <p>- Spanish | Basic to Intermediate Level</p>
+                        </div>
+                    </div>
+
+                    <div class="box-text">
+                        <h3>Programming Languages</h3>
+                        <div class="reveal-text">
+                            <p>- HTML | Programação Web</p>
+                            <p>- CSS | Programação Web</p>
+                            <p>- JavaScript | Programação Web</p>
+                            <p>- Python | Programação Web</p>
+                            <p>- Java | Algoritmia e Estrutura de Dados</p>
+                            <p>- C | Linguagens de Programação I</p>
+                            <p>- SQL | Base de Dados</p>
+                            <p>- Kotlin | Fundamentos de Programação</p>
+                            <p>- Assembly | Arquitetura de Computadores</p>
+                        </div>
+                    </div>
+
+                    <div class="box-text">
+                        <h3>Personal Skills</h3>
+                        <div class="reveal-text">
+                            <p>- Organized</p>
+                            <p>- Responsible</p>
+                            <p>- Interested</p>
+                            <p>- Punctual</p>
+                            <p>- Polite</p>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+
+            <section id="interests">
+
+                <div class="section-title">
+                    <h2>Interests</h2>
+                </div>
+
+                <div class="box-content">
+                    <div class="box-text">
+                        <h3>Interests</h3>
+                        <div class="reveal-text">
+                            <p>- AI</p>
+                            <p>- Engineering</p>
+                            <p>- Vehicles</p>
+                            <p>- Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/antunes07/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/TunaPT"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:asf.antunes@gmail.com"><i class="fa-brands fa-google-plus"></i></a>
+            <a href="https://www.linkedin.com/in/asf-antonio-antunes/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Lisbon, Portugal</p>
+            <p>António Antunes - &copy;2023 - Universidade Lusófona<img src="{% static 'images/lusofona.png' %}" alt="Lusofona Logo"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

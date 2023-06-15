@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="António Antunes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/computer.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="item-left">
+            <a href="../">Home</a>
+        </div>
+
+        <div class="item-center">
+            <a href="">About Website</a>
+            <a href="#technologies">Technologies</a>
+        </div>
+
+        <div class="dropDownMenu">
+            <button class="dropDownButton">Menu</button>
+            <div class="dropdown-content">
+                <a href="">About Website</a>
+                <a href="#technologies">Technologies</a>
+            </div>
+        </div>
+
+        <div class="item-right">
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cover-page">
+            <div class="title">
+                <h1>About Website</h1>
+            </div>
+        </div>
+
+        <div class="sections-page">
+            <section id="technologies">
+
+                <div class="section-title">
+                    <h2>Technologies</h2>
+                </div>
+
+                <div class="box-content">
+                    <div class="box-img">
+                        <img src="{% static 'images/css-code.png' %}" alt="CSS Code Example">
+                    </div>
+                    
+                    <div class="box-text">
+                        <h3>CSS - Cascade Style Sheet<img src="{% static 'images/css-logo.png' %}" alt="CSS Logo"></h3>
+                        <div class="reveal-text">
+                            <p>
+                                CSS has been created at 1996 by Håkon Wium Lie and Tim Berners-Lee. The link for official CSS website is <a href="https://www.w3.org/Style/CSS/">here</a> and this language 
+                                allows web pages to be customized in terms of design, such as sizes, colours, animations and others. Together with HTML, this website is using CSS for
+                                all they appearence.
+                            </p>
+
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="box-content">
+                    <div class="box-img">
+                        <img src="{% static 'images/html-code.png' %}" alt="HTML Code Example">
+                    </div>
+
+                    <div class="box-text">
+                        <h3>HTML - Hypertext Markup Language<img src="{% static 'images/html-logo.png' %}" alt="HTML Logo"></h3>
+                        <div class="reveal-text">
+                            <p>
+                                HTML has been created at 1990 by Tim Berners-Lee. The link for official HTML website is <a href="https://html.spec.whatwg.org/multipage/">here</a> and this language 
+                                allows to create web pages. It has several rules and variables that helps implementing a website and including text, images and video on them, 
+                                as an example. At the start web pages started to be static and nowadays with the help of CSS and other languages, websites can be a lot more customized
+                                and with animations. HTML is also mostly used with CSS and JavaScript to define the page body, being used on this page to create its structure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box-content">
+                    <div class="box-img">
+                        <img src="{% static 'images/javascript-code.png' %}" alt="JavaScript Code Example">
+                    </div>
+                    
+                    <div class="box-text">
+                        <h3>JavaScript<img src="{% static 'images/javascript-logo.png' %}" alt="JavaScript Logo"></h3>
+                        <div class="reveal-text">
+                            <p>
+                                JavaScript has been created at 1995 by Brendan Eich. The link for official JavaScript website is <a href="https://www.w3.org/standards/webdesign/script">here</a> and this language 
+                                allows to create more interactivity in the websites. As the name says, this language is focused in creating scripts, which integrated in a website, can allow certain
+                                animations and effects to it. An example of use in this website is the dark mode feature.
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/antunes07/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/TunaPT"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:asf.antunes@gmail.com"><i class="fa-brands fa-google-plus"></i></a>
+            <a href="https://www.linkedin.com/in/asf-antonio-antunes/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+        <div class="footer-text">
+            <p>Lisbon, Portugal</p>
+            <p>António Antunes - &copy;2023 - Universidade Lusófona<img src="{% static 'images/lusofona.png' %}" alt="Lusofona Logo"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

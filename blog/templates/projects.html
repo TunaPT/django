@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="António Antunes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/computer.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="item-left">
+            <a href="../">Home</a>
+        </div>
+
+        <div class="item-center">
+            <a href="">Projects</a>
+            <a href="#myprojects">My Projects</a>
+        </div>
+
+        <div class="dropDownMenu">
+            <button class="dropDownButton">Menu</button>
+            <div class="dropdown-content">
+                <a href="">Projects</a>
+                <a href="#myprojects">My Projects</a>
+            </div>
+        </div>
+
+        <div class="item-right">
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cover-page">
+            <div class="title">
+                <h1>Projects</h1>
+            </div>
+        </div>
+
+        <div class="sections-page">
+            <section id="myprojects">
+
+                <div class="section-title">
+                    <h2>My Projects</h2>
+                </div>
+                
+                <div class="box-content">
+                    <div class="box-img">
+                        <img src="{% static 'images/minesweeper.png' %}" alt="MineSweeper">
+                    </div>
+                    
+                    <div class="box-text">
+                        <h3>MineSweeper - Fundamentos de Programação - 2021</h3>
+                        <div class="reveal-text">
+                            <p>
+                                MineSweeper is game which to win the player must discover all empty places, without selecting a mine. If a square that contains a mine is
+                                pressed, the game is over and the player loses. This projects aims to developed this game with a console based system, where the player can define how
+                                many lines, columns and mines the game will have. It's useful to adapt the difficulty - <a href="https://github.com/TunaPT/MineSweeper">Repository</a>
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="box-content">
+                    <div class="box-img">
+                        <img src="{% static 'images/deisiflix.png' %}" alt="DeisiFlix">
+                    </div>
+                    
+                    <div class="box-text">
+                        <h3>DeisiFlix - Algoritmia e Estrutura de Dados - 2022</h3>
+                        <div class="reveal-text">
+                            <p>
+                                This project aims to develop an application in Java language thatthat is able to receive and respond to requests 
+                                for statistics about a database of films. Taking into account that one of the issues addressed in AED is the question of the efficiency of
+                                of data structures and algorithms, it is intended that the program developed is not only functionally correct, but also to be as fast as possible - 
+                                <a href="https://github.com/TunaPT/DeisiFlix">Repository</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-content">
+                    <div class="box-img">
+                        <img src="{% static 'images/deisijungle.png' %}" alt="DeisiJungle">
+                    </div>
+                    
+                    <div class="box-text">
+                        <h3>DeisiJungle - Linguagens de Programação II - 2022</h3>
+                        <div class="reveal-text">
+                            <p>
+                                One day, in a savannah very (very) far from here, the animals decided to find out who would be the best athlete amongst them.
+                                To do so, they defined a set of sporting events that they would compete against each other - whoever won the most events would be considered 
+                                the King of the Jungle. The news quickly reached Tarzan, who did not want to stop participating in the competitions, convinced that he would easily 
+                                win.The first competition is the athletics race. The animals will gather on a track and compete to determine which is the best athlete - 
+                                <a href="https://github.com/antonio-antunes-a22202276/LP2-22202276-22202133">Repository</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/antunes07/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/TunaPT"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:asf.antunes@gmail.com"><i class="fa-brands fa-google-plus"></i></a>
+            <a href="https://www.linkedin.com/in/asf-antonio-antunes/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Lisbon, Portugal</p>
+            <p>António Antunes - &copy;2023 - Universidade Lusófona<img src="{% static 'images/lusofona.png' %}" alt="Lusofona Logo"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

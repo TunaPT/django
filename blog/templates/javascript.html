@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="António Antunes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/computer.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="item-left">
+            <a href="../">Home</a>
+        </div>
+
+        <div class="item-center">
+            <a href="">JavaScript</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#image-text">Write Phrase</a>
+            <a href="#person-name">Insert Name</a>
+            <a href="#today-date">Today's Date</a>
+            <a href="#mouse-over">Mouse Over</a>
+        </div>
+
+        <div class="dropDownMenu">
+            <button class="dropDownButton">Menu</button>
+            <div class="dropdown-content">
+                <a href="">JavaScript</a>
+                <a href="#calculator">Calculator</a>
+                <a href="#image-text">rite Phrase</a>
+                <a href="#person-name">Insert Name</a>
+                <a href="#today-date">Today's Date</a>
+                <a href="#mouse-over">Mouse Over</a>
+            </div>
+        </div>
+
+        <div class="item-right">
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cover-page">
+            <div class="title">
+                <h1>JavaScript</h1>
+            </div>
+        </div>
+
+        <div class="sections-page">
+            <section id="calculator">
+
+                <div class="section-title">
+                    <h2>Calculator</h2>
+                </div>
+
+                <div class="box-content">
+                    <p>Write an arithmetic expression below and press calculate - Click reset to clear</p>
+                    <input id="expression" name="expression">
+                    <button id="calculate-expression">Calculate</button>
+                    <button id="calculator-clear">Clear</button>
+                    <div id="calculator-result"></div>  
+                </div>
+            </section>
+
+            <section id="image-text">
+                <div class="section-title">
+                    <h2>Write Phrase</h2>
+                </div>
+
+                <div class="box-content">
+                    <div id="text-result"></div>
+                    <img src="{% static 'images/matrix.png' %}" alt="Matrix">
+                    <p>Write a phrase about this image - it will be visible at the top of it - Click reset to clear</p>
+                    <input id="text-expression" name="text">
+                    <button id="print-text">Print</button>
+                    <button id="text-clear">Clear</button>
+                </div>
+            </section>
+
+            <section id="person-name">
+                <div class="section-title">
+                    <h2>Insert Name</h2>
+                </div>
+
+                <div class="box-content">
+                    <p>Insert your name - it will be printed 3 times - Click reset to clear</p>
+                    <input id="name-expression" name="name">
+                    <button id="print-name">Print</button>
+                    <button id="name-clear">Clear</button>
+                    <div id="name-result"></div>
+                </div>
+            </section>
+
+            <section id="date">
+                <div class="section-title">
+                    <h2>Today's Date</h2>
+                </div>
+
+                <div class="box-content">
+                    <p id="today-date"></p>
+                </div>
+            </section>
+
+            <section id="mouse-over">
+                <div class="section-title">
+                    <h2>Mouse Over</h2>
+                </div>
+
+                <div class="box-content">
+                    <div id="circle" onmouseover="changeColour()" onmouseout="resetColour()"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/antunes07/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/TunaPT"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:asf.antunes@gmail.com"><i class="fa-brands fa-google-plus"></i></a>
+            <a href="https://www.linkedin.com/in/asf-antonio-antunes/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Lisbon, Portugal</p>
+            <p>António Antunes - &copy;2023 - Universidade Lusófona<img src="{% static 'images/lusofona.png' %}" alt="Lusofona Logo"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

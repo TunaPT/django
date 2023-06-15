@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="António Antunes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/computer.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+    <h1>Apagar Post</h1>
+
+    <h2>{{ post.titulo }}</h2>
+    <p>{{ post.texto }}</p>
+    <ul>
+        {% for autor in post.autores.all %}
+            <li>{{ autor.nome }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if post.link %}
+        <a href="{{ post.link }}">Link</a>
+    {% endif %}
+
+    {% if post.imagem %}
+        <img src="{{ post.imagem.url }}" alt="Imagem do post">
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Apagar</button>
+    </form>
+</body>
+
+</html>

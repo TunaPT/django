@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="author" content="António Antunes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/computer.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body class="index-container">
+    
+    <nav>
+        <div class="item-left">
+            <a href="">Home</a>
+        </div>
+
+        <div class="item-center">
+            <a href="about-me">About Me</a>
+            <a href="about-website">About Website</a>
+            <a href="projects">Projects</a>
+            <a href="web-programming">Web Programming</a>
+            <a href="contact">Contacts</a>
+            <a href="javascript">JavaScript</a>
+            <a href="blog">Blog</a>
+        </div>
+
+        <div class="dropDownMenu">
+            <button class="dropDownButton">Menu</button>
+            <div class="dropdown-content">
+                <a href="about-me">About Me</a>
+                <a href="about-website">About Website</a>
+                <a href="projects">Projects</a>
+                <a href="web-programming">Web Programming</a>
+                <a href="contact">Contacts</a>
+                <a href="javascript">JavaScript</a>
+                <a href="blog">Blog</a>
+            </div>
+        </div>
+
+        <div class="item-right">
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cover-page">
+            <div class="title">
+                <h1>Welcome</h1>
+            </div>
+        </div>
+
+        <article>
+            <p>
+                Hello! 👋 I'm...
+            </p>
+            <br>
+            <p>
+                Currently studying Computing Engineering in the 2nd degree year at Universidade Lusófona.
+            </p>
+            <br>
+            <p>
+                Voluntarily working for TruckersMP, an online platform providing multiplayer services for the game Euro Truck Simulator 2, containing more than 5 million 
+                registered users and a worldwide team of 200 staff. Leading a team as Game Moderator Leader. Former Support and Translator staff.
+            </p>
+            <br>
+            <p>
+                Developer for FiveM platform. FiveM provides multiplayer services for GTA V and has daily connected 200k (two hundreed thousand) players. 
+            </p>
+            <br>
+            <p>
+                Looking to develop further skills and deepen computer knowledge, teamwork spirit and participation in other projects.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/antunes07/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/TunaPT"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:asf.antunes@gmail.com"><i class="fa-brands fa-google-plus"></i></a>
+            <a href="https://www.linkedin.com/in/asf-antonio-antunes/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Lisbon, Portugal</p>
+            <p>António Antunes - &copy;2023 - Universidade Lusófona<img src="{% static 'images/lusofona.png' %}" alt="Lusofona Logo"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
